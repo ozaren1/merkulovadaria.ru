@@ -1,0 +1,44 @@
+.header{
+    font-family: "Kanit", system-ui;
+    font-weight: 400;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      align-items: center;
+      padding: 20px 0;
+      font-weight: 500;
+
+    }
+   
+    a {
+      position: relative;
+      text-decoration: none;
+    }
+    
+    a::before,
+    .active::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #FFF;
+      transition: all 0.3s ease-out;
+    }
+    
+    a:hover::before,
+    .active::before {
+      width: 100%;
+      left: 0;
+      text-decoration: underline;
+    }
+    .logo a{
+      font-size: 30px;
+      &::before,
+      &:hover::before{
+        display: none;
+      }
+    }
+  }

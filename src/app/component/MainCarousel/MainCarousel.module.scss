@@ -1,0 +1,27 @@
+/* Slider.module.css */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer; /* Добавим курсор для кликабельности */
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  min-width: 100%;
+  opacity: 0;
+  height: calc(100vh - 85px);
+  transition: opacity 1s ease;
+  img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+.embla__slide.active {
+  opacity: 1;
+}
