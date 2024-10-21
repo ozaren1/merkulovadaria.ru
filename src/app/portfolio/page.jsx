@@ -6,10 +6,10 @@ export default function Portfolio() {
   return (
     <>
     <Container>
-    <h1>Portfolio</h1>
+    <h1>Портфолио</h1>
     <div className={styles.wrapper}>
         {data.map((obj) => (
-          <Card key={obj.url || index} url={obj.url}/>
+          <Card key={obj.url || index} url={obj.url} prev={obj.images} title={obj.title}/>
         ))}
         {/*НУжно ли тут использовать Use efect???*/}
       </div>

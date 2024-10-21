@@ -22,8 +22,7 @@ import Image from 'next/image'
       return (
     
         <>
-            <h1>{pageData.title}</h1>
-            <p>{pageData.description}</p>
+        <h1 className={styles.h1}>{pageData.title}</h1>
         <div className={styles.photo_grid}>
           {pageData.images && pageData.images.map((obj, index) => (
             <Image
@@ -37,7 +36,7 @@ import Image from 'next/image'
             />
           ))}
         </div>
-  
+        <p>{pageData.description}</p>
         {/* Если слайдер открыт, отображаем компонент EmblaCarousel */}
         {isSliderOpen && (
           <div className={styles.slider_overlay}>

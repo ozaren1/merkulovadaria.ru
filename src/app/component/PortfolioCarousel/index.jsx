@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import styles from './PortfolioCarousel.module.scss'; // Импортируем стили
+import styles from './PortfolioCarousel.module.scss'; 
+import Image from 'next/image'
 
 const PortfolioCarousel = ({ slides, initialIndex }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, startIndex: initialIndex });
@@ -38,7 +39,12 @@ const PortfolioCarousel = ({ slides, initialIndex }) => {
         <div className={styles.embla__container}>
           {slides.map((slide, index) => (
             <div className={styles.embla__slide} key={index}>
-              <img src={slide.src} alt={`Slide ${index}`} />
+              <Image 
+              src={slide.src} 
+              alt={`Slide ${index}`} 
+              width={400}
+              height={600}
+              />
             </div>
           ))}
         </div>

@@ -1,4 +1,7 @@
-
+.h1{
+  font-family: var(--NarzissProCyrillic);
+  text-align: center;
+}
 .photo_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

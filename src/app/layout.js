@@ -3,9 +3,9 @@ import "./globals.css";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const NarzissProCyrillic = localFont({
+  src: "@/../fonts/NarzissProCyrillicDrops-ExtraBo.woff",
+  variable: "--NarzissProCyrillic",
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${NarzissProCyrillic.variable} ${geistMono.variable}`}>
         <Header/>
         {children}
         <Footer/>

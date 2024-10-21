@@ -7,14 +7,15 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 4px;
     }
     
     span{
-        font-family: "Libre Bodoni", serif;
+        font-family: var(--NarzissProCyrillic);
         position: absolute;
-        font-size: 100px;
+        font-size: 60px;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 45%);
+        transform: translate(-50%, 60%);
     }
 }
