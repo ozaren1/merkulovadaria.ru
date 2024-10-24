@@ -5,33 +5,56 @@
 .photo_grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 260px; /* Каждая новая строка будет высотой 200px */
- /* Повторяет строки по 200px, пока есть место */
+    grid-auto-rows: 30vh;
     gap: 20px;
-    img {
+    .image_wrap{
+      border-radius: 3px;
       width: 100%;
       height: 100%;
-      cursor: pointer;
       transition: 0.5s ease-in-out;
-      object-fit: cover;
-      border-radius: 3px;
-      &:hover{
-        transform: scale(1.05);
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      @media (hover: hover) {
+        &:hover{
+          transform: scale(0.95);
+        }
+        
       }
+      img {
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        transition: 0.5s ease-in-out;
+        object-fit: cover;
+        @media (hover: hover) {
+          &:hover{
+            transform: scale(1.2);
+          }
+          
+        }
+      }
+     
+      
     }
     
+    @media (max-width : 992px){
+        
+      &{
+          grid-template-columns: repeat(3, 1fr);
+      }
+    
+    }
+
+    @media (max-width : 640px){
+       &{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
   }
   
 
   
-
-
-
-
-
-
-
-
   .slider_overlay {
     position: fixed;
     top: 0;

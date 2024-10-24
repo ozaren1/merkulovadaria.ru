@@ -25,6 +25,8 @@ import Image from 'next/image'
         <h1 className={styles.h1}>{pageData.title}</h1>
         <div className={styles.photo_grid}>
           {pageData.images && pageData.images.map((obj, index) => (
+            <div className={styles.image_wrap} key={obj.id}>
+              {/*КЛЮЧИ*/}
             <Image
               key={obj.id}
               src={obj.src}
@@ -34,6 +36,7 @@ import Image from 'next/image'
               width={260}
               height={260}
             />
+            </div>
           ))}
         </div>
         <p>{pageData.description}</p>

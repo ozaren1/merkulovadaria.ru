@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Price() {
     return(
         
-        <div className={styles.price}>
+        <section className={styles.price}>
           <Container>
             <h2>Тарифы</h2>
             <div className={styles.wrapper}>
@@ -54,7 +54,7 @@ export default function Price() {
                 </div>
             </div>
           </Container>
-      </div>
+      </section>
     
     );
 }

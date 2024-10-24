@@ -6,4 +6,23 @@
     img{
         border-radius: 4px;
     }
+
+
+
+    @media (max-width : 992px){
+        
+      &{
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10vh calc((100% - 600px));
+      }
+    
+    }
+
+    @media (max-width : 640px){
+       &{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+}
 }
