@@ -3,7 +3,7 @@ const data = [
         id: 'model1',
         url: 'veronika',
         title: 'Veronika',
-        description: 'Description for Model 1 with key features and specifications.',
+        description: '',
         images: [
             { id: 1, src: '/assets/image/model/veronika/1.jpg' },
             { id: 2, src: '/assets/image/model/veronika/2.jpg' },

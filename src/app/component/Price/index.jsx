@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Price() {
     return(
         
-        <section className={styles.price}>
+        <section className={`${styles.price} padding`}>
           <Container>
             <h2>Тарифы</h2>
             <div className={styles.wrapper}>

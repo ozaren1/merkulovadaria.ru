@@ -3,7 +3,7 @@ import styles from "./AboutMe.module.scss"
 
 export default function AboutMe(){
     return(
-        <section className={styles.about_me}>
+        <section className={`${styles.about_me} padding`}>
           <Container>
               <div className={styles.wrapper}>
                   <div className={styles.left}>

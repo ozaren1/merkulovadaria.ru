@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.scss";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 

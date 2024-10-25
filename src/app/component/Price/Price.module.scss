@@ -1,5 +1,4 @@
 .price{
-    padding: 100px 0;
     .wrapper{
         display: flex;
         justify-content: space-between;
@@ -27,7 +26,7 @@
     }
 
 
-
+   
     @media (max-width : 992px ) and (min-width : 571px){
         &{
             .wrapper{
@@ -57,7 +56,6 @@
             }
         }
     }
-
     @media (max-width : 570px){
        &{
          .wrapper{

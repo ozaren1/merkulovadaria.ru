@@ -1,5 +1,4 @@
 .about_me{
-    padding: 100px 0;
     font-weight: 400;
     background-color: var(--colorWhite);
     position: relative;
@@ -41,7 +40,6 @@
             font-size: 20px;
         }
     }
-
     @media (max-width : 992px){
         &{
             .wrapper{
@@ -56,23 +54,25 @@
             }
         }
     }
-
     @media (max-width : 680px){
        &{
             .wrapper{
                 flex-direction: column;    
+            }
         }
-       
     }
-}
-@media (max-width : 430px){
-     &::after{
-         filter: blur(300px);
-         width: 90%;
-         height: 110%;
-         
-     }
- }
+    @media (max-width : 430px){
+        &::after{
+            filter: blur(300px);
+            width: 90%;
+            height: 110%;
+        }
+    }
+
 }
 
     
+
+
+
+

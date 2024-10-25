@@ -1,0 +1,33 @@
+.main_title{
+    font-family: var(--NarzissProCyrillic);
+    display: block;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    h1{
+        font-size: clamp(40px, 5vw, 60px);
+        display: block;
+        animation: marquee 20s linear infinite;
+        margin: 0 0 0 0;
+        letter-spacing: 5px;
+      }
+       
+  @keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
+ 
+  
+}
+  
+  
+  
+  
+ 

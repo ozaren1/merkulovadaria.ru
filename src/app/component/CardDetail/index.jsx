@@ -21,33 +21,34 @@ import Image from 'next/image'
     };
       return (
     
-        <>
-        <h1 className={styles.h1}>{pageData.title}</h1>
-        <div className={styles.photo_grid}>
-          {pageData.images && pageData.images.map((obj, index) => (
-            <div className={styles.image_wrap} key={obj.id}>
-              {/*КЛЮЧИ*/}
-            <Image
-              key={obj.id}
-              src={obj.src}
-              alt={`Photo ${obj.id}`}
-              onClick={() => openSlider(index)}
-              className="photo-grid__item"
-              width={260}
-              height={260}
-            />
-            </div>
-          ))}
-        </div>
-        <p>{pageData.description}</p>
-        {/* Если слайдер открыт, отображаем компонент EmblaCarousel */}
-        {isSliderOpen && (
-          <div className={styles.slider_overlay}>
-            <button className={styles.close_slider} onClick={closeSlider}></button>
-            <PortfolioCarousel slides={pageData.images} initialIndex={currentIndex} />
+        <div className={`${styles.card__detail} padding`}>
+          <h1 >{pageData.title}</h1>
+          <div className={styles.photo_grid}>
+            {pageData.images && pageData.images.map((obj, index) => (
+              <div className={styles.image_wrap} key={obj.id}>
+                {/*КЛЮЧИ*/}
+              <Image
+                key={obj.id}
+                src={obj.src}
+                alt={`Photo ${obj.id}`}
+                onClick={() => openSlider(index)}
+                className="photo-grid__item"
+                width={260}
+                height={260}
+              />
+              </div>
+            ))}
           </div>
-        )}
-      </>
+          {pageData.description ?? (<p>{pageData.description}</p>)}
+          
+          {/* Если слайдер открыт, отображаем компонент EmblaCarousel */}
+          {isSliderOpen && (
+            <div className={styles.slider_overlay}>
+              <button className={styles.close_slider} onClick={closeSlider}></button>
+              <PortfolioCarousel slides={pageData.images} initialIndex={currentIndex} />
+            </div>
+          )}
+      </div>
      
     );
    
