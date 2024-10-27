@@ -1,5 +1,12 @@
 import Container from "@/app/component/Container"
 import styles from './Contact.module.scss';
+
+export const metadata = {
+    title: "Фотограф Дарья Меркулова – Контакты для записи на съемку",
+    description: "Запишитесь на фотосессию к Дарье Меркуловой: фэшн, художественные портреты, коммерческая съемка в Москве и Туле. Телефон для связи: +7 915 789-90-78.",
+    keywords: "фотосессия Тула, фотосессия Москва, контакт фотографа, профессиональная съемка, Дарья Меркулова, телефон для связи",
+  };
+
 export default function Contact() {
     return(
         <>

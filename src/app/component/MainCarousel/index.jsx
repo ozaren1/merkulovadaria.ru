@@ -5,7 +5,6 @@ import Autoplay from 'embla-carousel-autoplay';
 import styles from './MainCarousel.module.scss';
 import Image from 'next/image';
 import slides from "./slides"
-console.log(slides)
 const MainCarousel = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const autoplayInstance = useRef(Autoplay({ delay: 10000, stopOnInteraction: false }));
@@ -52,7 +51,7 @@ const MainCarousel = () => {
             className={`${styles.embla__slide} ${index === currentIndex ? styles.active : ''}`}
             key={index}
           >
-            <Image src={slide.src} alt={`Slide ${index + 1}`} width={slide.width} height={slide.height}/>
+            <Image src={slide.src} alt={`Slide ${index + 1}`} width={slide.width} height={slide.height} />
           </div>
         ))}
       </div>

@@ -10,7 +10,6 @@ import Image from 'next/image'
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const pageData = props.pageData;
-    console.log(pageData)
     const openSlider = (index) => {
       setCurrentIndex(index);
       setIsSliderOpen(true);
@@ -22,7 +21,7 @@ import Image from 'next/image'
       return (
     
         <div className={`${styles.card__detail} padding`}>
-          <h1 >{pageData.title}</h1>
+          <h1 >{pageData.title && pageData.title}</h1>
           <div className={styles.photo_grid}>
             {pageData.images && pageData.images.map((img, index) => (
               <div className={styles.image_wrap} key={index}>
@@ -45,7 +44,7 @@ import Image from 'next/image'
           {isSliderOpen && (
             <div className={styles.slider_overlay}>
               <button className={styles.close_slider} onClick={closeSlider}></button>
-              <PortfolioCarousel slides={pageData.images} initialIndex={currentIndex} />
+              <PortfolioCarousel slides={pageData.images && pageData.images} initialIndex={currentIndex} />
             </div>
           )}
       </div>
