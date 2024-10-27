@@ -3,8 +3,10 @@ import React, { useEffect, useState, useCallback, useRef } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import styles from './MainCarousel.module.scss';
-
-const MainCarousel = ({ slides }) => {
+import Image from 'next/image';
+import slides from "./slides"
+console.log(slides)
+const MainCarousel = () => {
   const [windowWidth, setWindowWidth] = useState(0);
   const autoplayInstance = useRef(Autoplay({ delay: 10000, stopOnInteraction: false }));
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, skipSnaps: false }, [autoplayInstance.current]);
@@ -50,7 +52,7 @@ const MainCarousel = ({ slides }) => {
             className={`${styles.embla__slide} ${index === currentIndex ? styles.active : ''}`}
             key={index}
           >
-            <img src={slide} alt={`Slide ${index + 1}`} />
+            <Image src={slide.src} alt={`Slide ${index + 1}`} width={slide.width} height={slide.height}/>
           </div>
         ))}
       </div>

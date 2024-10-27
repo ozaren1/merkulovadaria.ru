@@ -5,7 +5,7 @@ function Card(props) {
   return (
     <Link className={styles.card} href={'/portfolio/' + props.url}>
         <Image
-         src={props.prev[0]['src']}
+         src={props.prev[0].src}
          alt="Model"
          width={640} // Задайте ширину изображения
         height={960}

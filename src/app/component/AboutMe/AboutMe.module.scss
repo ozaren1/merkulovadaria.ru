@@ -43,23 +43,13 @@
     @media (max-width : 992px){
         &{
             .wrapper{
-                gap: 50px;
-                .left{
-                    flex-basis: 45%;
-                }
-                .right{
-                    flex-basis: 55%;
-                    
-                }
+                flex-direction: column-reverse;   
+                gap: 40px; 
             }
         }
     }
     @media (max-width : 680px){
-       &{
-            .wrapper{
-                flex-direction: column;    
-            }
-        }
+       
     }
     @media (max-width : 430px){
         &::after{

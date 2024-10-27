@@ -14,7 +14,7 @@
     span{
         font-family: var(--NarzissProCyrillic);
         position: absolute;
-        font-size: 60px;
+        font-size: clamp(35px, 5vw, 40px);
         bottom: 0;
         left: 50%;
         transform: translate(-50%, 60%);
