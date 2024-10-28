@@ -9,7 +9,7 @@ import mobSlide1 from "@@/assets/image/mainBanner/mobile/slide-1.jpg"
 import mobSlide2 from "@@/assets/image/mainBanner/mobile/slide-2.jpg"
 import mobSlide3 from "@@/assets/image/mainBanner/mobile/slide-3.jpg"
 import mobSlide4 from "@@/assets/image/mainBanner/mobile/slide-4.jpg"
-import mobSlide5 from "@@/assets/image/mainBanner/mobile/slide-5.jpg"
+import mobSlide5 from "@@/assets/image/mainBanner/mobile/slide-5.JPG"
 import mobSlide6 from "@@/assets/image/mainBanner/mobile/slide-6.jpg"
 
 
