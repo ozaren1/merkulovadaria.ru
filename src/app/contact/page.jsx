@@ -35,8 +35,8 @@ export default function Contact() {
                             <span>Также вы можете следить за моими работами и подробнее ознакомиться с ними в моих социальных сетях.</span>
                         </div>
                         <div className={styles.links}>
-                            <a href="" target="_blank">группа в Telegram</a>
-                            <a href="" target="_blank">группа в вконтакте</a>
+                            <a href="https://t.me/merkulooovadaria" target="_blank">группа в Telegram</a>
+                            <a href="https://vk.com/merkulooovadaria" target="_blank">группа в вконтакте</a>
                         </div>
                     </div>
 
