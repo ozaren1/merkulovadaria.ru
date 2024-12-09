@@ -48,6 +48,7 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 50px 30px;
                 .item{
+                    height: fit-content;
                     &:nth-child(1){
                         grid-column-start: 1;
                         grid-column-end: 3;
@@ -83,9 +84,7 @@
                 &:nth-child(2){
                     margin-top: 0px;
                 }
-                h3{
-                    margin: 0 0 0 0;
-                }
+                
                 img{
                     max-height: 50vh;
                     object-fit: cover;
