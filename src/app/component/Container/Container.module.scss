@@ -4,12 +4,19 @@
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
-  @media (min-width: 1200px) {
+    /* Стили для 2K мониторов (от 1440px до 2559px) */
+   @media (min-width: 1440px) {
+     & {
+       max-width: 1300px; /* Можно настроить под ваш макет */
+     }
+   }
+
+  @media (min-width: 1200px ) and (max-width: 1439px){
     & {
       max-width: 1140px;
     }
   }
-  
+
   /* Стили для средних экранов (от 992px до 1199px) */
   @media (min-width: 992px) and (max-width: 1199px) {
     & {

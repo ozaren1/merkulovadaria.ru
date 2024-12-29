@@ -23,7 +23,7 @@
           width: 100%;
           position: absolute;
           height: 100%;
-          transition: 0.5s ease-in-out;
+          transition: 0.1s linear;
           object-fit: cover;
           @media (hover: hover) {
             &:hover{

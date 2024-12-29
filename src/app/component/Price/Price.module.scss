@@ -8,6 +8,9 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            height: min-content;
+            opacity: 0;
+            
             .item__prev{
                 height: 50%;
                 flex-basis: 50%;
@@ -34,7 +37,7 @@
             }
             
             &:nth-child(2){
-                margin-top: 50px;
+                margin-top: 70px;
             }
         }
     }
@@ -56,17 +59,20 @@
                         grid-row-end: 2;
                     }
                     &:nth-child(2){
-                        grid-column-start: 3;
-                        grid-column-end: 5;
-                        grid-row-start: 1;
-                        grid-row-end: 2;
-                    }
-                    &:nth-child(3){
                         grid-column-start: 2;
                         grid-column-end: 4;
                         grid-row-start: 2;
                         grid-row-end: 3;
+                        margin-top: 0;
                     }
+                    &:nth-child(3){
+                        grid-column-start: 3;
+                        grid-column-end: 5;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        margin-top: 50px;
+                    }
+                   
                 }
             }
         }
@@ -74,17 +80,26 @@
     @media (max-width : 570px){
        &{
          .wrapper{
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns:  1fr;
             gap: 50px;
 
             .item{
-                height: 100vh;
+                height: max-content;
                 gap: 20px;
                 &:nth-child(2){
-                    margin-top: 0px;
+                    grid-row-start: 3;
                 }
-                
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+                &:nth-child(3){
+                    margin-top: 0;
+                }
+               
+                .item__content{
+                    height: min-content;
+                }
                 img{
                     max-height: 50vh;
                     object-fit: cover;

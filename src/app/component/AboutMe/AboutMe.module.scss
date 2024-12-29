@@ -20,6 +20,7 @@
     
     
     .wrapper{
+        overflow: hidden; 
         display: flex;
         position: relative;
         gap: 100px;
@@ -34,10 +35,17 @@
                 width: 100%;
                 object-fit: cover;
                 border-radius: 10px;
+                transform: scale(0.9) translateX(50px); /* Начальное состояние изображения */
+                opacity: 0;
             }
         }
         .description{
             font-size: 20px;
+            p{
+                opacity: 0; /* Начальное состояние текста */
+                transform: translateY(30px); /* Сдвиг вниз */
+            }
+        
         }
     }
     @media (max-width : 992px){
