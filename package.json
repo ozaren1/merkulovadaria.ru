@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "axios": "^1.8.4",
     "embla-carousel": "^8.3.0",
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
@@ -21,8 +22,11 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.12",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
-    "sass": "^1.79.4"
+    "sass": "^1.79.4",
+    "typescript": "^5.8.2"
   }
 }
