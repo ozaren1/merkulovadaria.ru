@@ -1,0 +1,146 @@
+.contact{
+    font-family: "Kanit", system-ui;
+    font-weight: 400;
+    h1{
+        margin-top: 0;
+    }
+    .description{
+        font-size: 20px;
+        flex-basis: 60%;
+    }
+    .links{
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        a{
+            white-space: nowrap;
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            border-radius: 3px;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px 40px;
+            transition: all .4s ease-in-out;
+            font-weight: 500;
+            border: 2px solid #fff;
+            background-color: rgba(0, 0, 0, 0.19); /* Черный цвет с прозрачностью 50% */
+            @media (hover: hover) {
+                &:hover{
+                    border-color: transparent; /* При наведении бордер становится прозрачным */
+                    background-color:transparent;
+                }
+                
+              }
+           
+        }
+    }
+    .communication{
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 100px;
+        &::after{
+            position: absolute;
+            content: '';
+            background: var(--pinkGradient);
+            filter: blur(200px);
+            z-index: -1; /* Чтобы объект был фоном */
+            display: block;
+            width: 63%;
+            height: 55%;
+            right: 0;
+            bottom: 0;
+            transform: rotate();
+        }
+        .description{
+            flex-basis: 40%;
+            gap: 80px;
+            display: flex;
+            flex-direction: column;
+            .description_link{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        .links{
+            flex-basis: 60%;
+        }
+    
+    }
+    .sources{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 100px;
+        position: relative;
+        margin-top: 100px;
+        &::after{
+            position: absolute;
+            content: '';
+            background: var(--redGradient);
+            border-radius: 50%;
+            filter: blur(250px);
+            z-index: -1; /* Чтобы объект был фоном */
+            display: block;
+            width: 60%;
+            height: 100%;
+            left: 0px;
+            bottom: 0px;
+        }
+        .description{
+            flex-basis: 60%;
+        }
+        .links{
+            flex-basis: 40%;
+        }
+    }
+    @media (max-width : 1200px){
+        &{
+            .communication,
+            .sources{
+                gap: 80px;
+                
+            }
+            .communication{
+                .description{
+                    gap: 50px;
+                }
+        }
+            
+        }
+    }
+    @media (max-width : 991px){
+        &{
+            .communication{
+                .description{
+                    gap: 40px;
+                }
+        }
+    }
+}
+    @media (max-width : 767px){
+        &{
+            .sources{
+                margin-top: 40px;
+            }
+            .sources, 
+            .communication{
+                flex-direction: column;
+                gap: 40px;
+                .description{
+                    flex-basis: auto;
+                    width: 100%;
+                    gap: 40px;
+                }
+                .links{
+                    flex-basis: auto;
+                    width: 100%;
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}
