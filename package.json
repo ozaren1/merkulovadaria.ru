@@ -11,13 +11,16 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@prisma/client": "^6.5.0",
     "axios": "^1.8.4",
     "embla-carousel": "^8.3.0",
     "embla-carousel-autoplay": "^8.3.0",
     "embla-carousel-react": "^8.3.0",
     "gsap": "^3.12.5",
     "next": "^15.0.2",
+    "next-auth": "^4.24.11",
     "next-sitemap": "^4.2.3",
+    "prisma": "^6.5.0",
     "react": "^18",
     "react-dom": "^18"
   },

@@ -8,7 +8,6 @@ export const metadata = {
   description: "Работы фотографа Дарьи Меркуловой: от фэшн-фотосессий и художественных портретов до коммерческих проектов. Оригинальные образы и эксклюзивные кадры для каждого клиента.",
   keywords: "портфолио, фотограф Дарья Меркулова, фэшн-фотография, портретная съемка, коммерческие фотографии, эксклюзивные кадры",
 }; 
-console.log(metadata)
 
 export default function Portfolio() {
   return (
@@ -18,7 +17,7 @@ export default function Portfolio() {
         <h1>Портфолио</h1>
         <div className={styles.wrapper}>
           {data.map((obj) => (
-            <Card key={obj.url || index} url={obj.url} preview={obj.images[0].src} title={obj.title}/>
+            <Card key={obj.id} url={obj.url} preview={obj.images[0].src} title={obj.title}/>
           ))}
         </div>
       </div>
