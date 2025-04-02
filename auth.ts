@@ -2,6 +2,7 @@ import NextAuth from "next-auth"
 import Credentials from "next-auth/providers/credentials"
 // Your own logic for dealing with plaintext password strings; be careful!
 import { saltAndHashPassword } from "./shared/lib/password"
+import {prisma} from "@@@/prisma/prisma-client";
  
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
@@ -19,7 +20,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         const pwHash = saltAndHashPassword(credentials.password)
  
         // logic to verify if the user exists
-        user = await getUserFromDb(credentials.login, pwHash)
+        user = await prisma.user.findFirst({
+            email: login,
+            password: pwHash,
+        })
  
         if (!user) {
           // No user found, so this is their first attempt to login
@@ -33,3 +37,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
 })
+
+
