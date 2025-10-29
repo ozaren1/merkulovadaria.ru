@@ -1,0 +1,58 @@
+# Используем актуальную версию синтаксиса
+version: '3.8'
+
+# Определяем наши сервисы (контейнеры)
+services:
+
+  # Сервис базы данных PostgreSQL
+  db:
+    image: postgres:15-alpine # Используем официальный и легковесный образ Postgres
+    container_name: db
+    restart: always # Всегда перезапускать контейнер, если он остановился
+    env_file:
+      - .db.env # Подключаем файл с переменными окружения (логин, пароль, имя бд)
+    volumes:
+      - pg_data:/var/lib/postgresql/data # Сохраняем данные БД на хост-машине, чтобы они не терялись при перезапуске
+    ports:
+      - "5432:5432" # Пробрасываем порт, чтобы можно было подключиться к БД с локальной машины (например, через DBeaver)
+    networks:
+      - my_network
+
+  # Сервис бэкенда на NestJS
+  backend:
+    build:
+      context: ./backend # Указываем путь к папке с Dockerfile для бэкенда
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: always
+    env_file:
+      - .env # Подключаем переменные окружения для бэкенда
+    ports:
+      - "4200:4200" # Пробрасываем порт API (поменяйте, если у вас другой)
+    depends_on:
+      - db # Запускать бэкенд только после того, как запустится база данных
+    networks:
+      - my_network
+
+  # Сервис фронтенда на Next.js
+  frontend:
+    build:
+      context: ./frontend # Указываем путь к папке с Dockerfile для фронтенда
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3000" # Стандартный порт для Next.js
+    depends_on:
+      - backend # Необязательно, но логично, что фронтенд зависит от бэкенда
+    networks:
+      - my_network
+
+# Определяем тома (volumes) для сохранения данных
+volumes:
+  pg_data:
+
+# Определяем сети (networks) для коммуникации контейнеров
+networks:
+  my_network:
+    driver: bridge
