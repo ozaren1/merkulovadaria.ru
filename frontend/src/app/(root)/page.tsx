@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.scss";
-import MainCarousel from '@@@/shared/components/MainCarousel'
+import MainBanner from '@@@/shared/components/MainBanner'
 import Price from '@@@/shared/components/Price'
 import AboutMe from '@@@/shared/components/AboutMe'
 
@@ -15,7 +15,7 @@ export default function Home() {
   
 return (
   <>
-    <MainCarousel />
+    <MainBanner />
      <div className={`${styles.main_title} padding`}>
       <h1 className={styles.marquee_content}>Фотограф, создающий искусство из каждого кадра</h1>
      </div>

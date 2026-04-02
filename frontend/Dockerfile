@@ -2,16 +2,13 @@
 FROM node:22-alpine
 
 # Устанавливаем рабочую директорию
-WORKDIR /app
+WORKDIR /home/app
 
 # Копируем package.json и lock-файл
 COPY package*.json ./
 
 # Устанавливаем зависимости
 RUN npm install
-
-# Копируем остальной код
-COPY . .
 
 # Открываем порт
 EXPOSE 3000

@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model MainBanner {
+  // Идентификаторы
+  id String @id @default(uuid(7))
+
+  // Техническое название (удобно для админки, чтобы понимать, что это за баннер)
+  internalName String?
+
+  // Пути к картинкам (исправлена опечатка и нейминг)
+  pathMobile  String
+  pathDesktop String
+
+  // SEO и доступность
+  alt String?
+
+  // Управление отображением
+  active    Boolean @default(true)
+  sortOrder Int     @default(0) // Для управления порядком (какой баннер первый, какой второй)
+
+  // Временные метки (критически важны для отладки)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+
+
+  @@map("main_banners") // Хорошая практика: в базе таблица называется snake_case
+}

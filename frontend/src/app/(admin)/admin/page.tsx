@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 interface Props {
   name?: string;
@@ -7,7 +8,8 @@ interface Props {
 const ComponentName: React.FC<Props> = ({ name }) => {
   return (
     <div>
-      /* Your JSX here */
+      <Link href="/admin/banner">mainBanner</Link>
+
     </div>
   );
 };
